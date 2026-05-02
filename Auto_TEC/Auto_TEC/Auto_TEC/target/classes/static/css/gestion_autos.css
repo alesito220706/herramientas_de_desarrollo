@@ -1,0 +1,234 @@
+
+/* Importar los estilos base de admin */
+@import 'admin.css';
+
+/* Estilos específicos para la gestión de autos */
+.modelo-img {
+    width: 80px;
+    height: 60px;
+    border-radius: 0.5rem;
+    object-fit: cover;
+    border: 1px solid var(--border-light);
+    transition: var(--transition-normal);
+}
+
+.modelo-img:hover {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-md);
+}
+
+/* Personalización de la tabla */
+.table-autos {
+    margin-top: 1.5rem;
+}
+
+.table-autos th {
+    background: linear-gradient(45deg, rgba(212, 175, 55, 0.1), rgba(168, 85, 247, 0.1));
+    color: var(--color-primary);
+    font-weight: 600;
+    border-bottom: 2px solid var(--border-light);
+}
+
+.table-autos td {
+    vertical-align: middle;
+}
+
+/* Estados de los modelos */
+.estado-badge {
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+.estado-badge.disponible {
+    background: rgba(34, 197, 94, 0.1);
+    color: #22c55e;
+    border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.estado-badge.reservado {
+    background: rgba(234, 179, 8, 0.1);
+    color: #eab308;
+    border: 1px solid rgba(234, 179, 8, 0.2);
+}
+
+.estado-badge.vendido {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+/* Botones de acción */
+.btn-accion {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    margin: 0 0.25rem;
+    transition: var(--transition-normal);
+}
+
+.btn-accion:hover {
+    transform: translateY(-2px);
+}
+
+.btn-accion i {
+    font-size: 1rem;
+}
+
+/* ============================
+   ESTILOS PARA EL MODAL
+============================ */
+
+/* Fondo del modal */
+.modal {
+    position: fixed !important;
+    inset: 0 !important;
+    z-index: 9999 !important;
+}
+/* Que el contenido del modal nunca se recorte */
+.modal-dialog {
+    max-height: 90vh !important;
+    display: flex;
+    align-items: center;
+}
+.modal-dialog-scrollable .modal-body {
+    overflow-y: auto;
+    max-height: calc(90vh - 150px);
+}
+main, .container-fluid, .row {
+    overflow: visible !important;
+}
+.modal-content {
+    background: #111827;               /* Azul oscuro elegante */
+    color: #f1f1f1;
+    border-radius: 12px;
+    border: 1px solid #4f46e5;         /* Borde morado */
+    box-shadow: 0 0 25px rgba(79, 70, 229, 0.4);
+    animation: modalFadeIn 0.25s ease-out;
+}
+
+/* Header */
+.modal-header {
+    background: #0f172a !important;
+    border-bottom: 1px solid #4f46e5;
+}
+
+.modal-title {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Inputs del modal */
+.modal-content .form-control,
+.modal-content .form-select,
+.modal-content textarea {
+    background: #1e293b;               /* Fondo gris azulado */
+    border: 1px solid #334155;         /* Borde tenue */
+    color: #e5e7eb;                    /* Texto gris claro */
+    border-radius: 8px;
+    transition: 0.25s ease;
+}
+
+.modal-content .form-control:focus,
+.modal-content .form-select:focus,
+.modal-content textarea:focus {
+    border-color: #6366f1;             /* Moradito */
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+}
+
+/* Labels */
+.modal-content .form-label {
+    font-weight: 500;
+    color: #cbd5e1;
+}
+
+/* CheckBox */
+.modal-content .form-check-label {
+    color: #e2e8f0;
+}
+
+.modal-content .form-check-input:checked {
+    background-color: #6366f1;
+    border-color: #6366f1;
+}
+
+/* Footer */
+.modal-footer {
+    border-top: 1px solid #4f46e5;
+}
+
+.modal-footer .btn-primary {
+    background-color: #6366f1;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 8px;
+    transition: 0.25s ease;
+}
+
+.modal-footer .btn-primary:hover {
+    background-color: #4f46e5;
+}
+
+.modal-footer .btn-outline-secondary {
+    border-radius: 8px;
+    color: #cbd5e1;
+    border-color: #64748b;
+}
+
+.modal-footer .btn-outline-secondary:hover {
+    background-color: #334155;
+    color: white;
+}
+
+/* Animación suave */
+@keyframes modalFadeIn {
+    from {
+        transform: translateY(-15px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/* ----------- BOTONES DE MODAL ----------- */
+.btn-secondary {
+  background-color: #ccc2b8;
+  border: none;
+}
+
+.btn-secondary:hover {
+  background-color: #a89c8d;
+}
+
+/* Previsualizador de imagen */
+.preview-container {
+    width: 100%;
+    height: 200px;
+    border: 2px dashed var(--border-light);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    transition: var(--transition-normal);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.preview-container:hover {
+    border-color: var(--color-primary);
+    background: rgba(212, 175, 55, 0.05);
+}
+
+.preview-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
