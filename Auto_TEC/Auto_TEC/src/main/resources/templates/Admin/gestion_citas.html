@@ -25,7 +25,7 @@
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
             <h1 class="h2">Gestión de Citas</h1>
             <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCrearCita">
-                <i class="fas fa-plus me-1"></i>Nueva Cita
+                <i class="fas fa-plus me-1"></i>Nueva Cita!
             </button>
         </div>
 
@@ -72,7 +72,7 @@
                         </td>
                         <td>
                             <span th:if="${cita.empleado}" th:text="${cita.empleado.nombres}"></span>
-                            <span th:unless="${cita.empleado}" class="text-muted">Sin asignar</span>
+                            <span th:unless="${cita.empleado}" class="text-muted">Aun sin asignar</span>
                         </td>
                         <td class="table-actions">
                             <!-- Editar - Ahora abre modal específico para esta cita -->
