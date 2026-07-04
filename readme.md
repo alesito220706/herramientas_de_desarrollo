@@ -20,6 +20,7 @@ La plataforma se ha desarrollado bajo un enfoque desacoplado y estructurado en c
 
 El árbol de directorios sigue el estándar oficial de un proyecto empresarial gestionado por Maven:
 
+```text
 Auto_TEC/
 ├── src/main/java/com/organization/Auto_TEC/
 │   ├── Config/          # Infraestructura core (Seguridad JWT, Cloudinary, Web MVC)
